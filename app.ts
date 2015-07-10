@@ -15,6 +15,10 @@ class MyAppComponent {
   constructor() {
     this.name = 'Alice';
   }
+  
+  hello() {
+    alert(1);
+  }
 }
 
 bootstrap(MyAppComponent);
