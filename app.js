@@ -7,23 +7,20 @@ if (typeof __decorate !== "function") __decorate = function (decorators, target,
         case 4: return decorators.reduceRight(function(o, d) { return (d && d(target, key, o)) || o; }, desc);
     }
 };
-if (typeof __metadata !== "function") __metadata = function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 var angular2_1 = require('angular2/angular2');
-var MyAppComponent = (function () {
-    function MyAppComponent() {
-        this.name = 'Alice';
+var display_component_1 = require('display-component');
+var MainComponent = (function () {
+    function MainComponent() {
     }
-    MyAppComponent = __decorate([
+    MainComponent = __decorate([
         angular2_1.Component({
-            selector: 'my-app'
+            selector: 'main-app'
         }),
         angular2_1.View({
-            template: '<h1>Hello {{ name }}</h1>'
-        }), 
-        __metadata('design:paramtypes', [])
-    ], MyAppComponent);
-    return MyAppComponent;
+            template: "\n    <h1>Main App</h1>\n    <display></display>\n  ",
+            directives: [display_component_1.DisplayComponent]
+        })
+    ], MainComponent);
+    return MainComponent;
 })();
-angular2_1.bootstrap(MyAppComponent);
+angular2_1.bootstrap(MainComponent);

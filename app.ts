@@ -1,25 +1,22 @@
 /// <reference path="typings/angular2/angular2.d.ts" />
 
 import {Component, View, bootstrap} from 'angular2/angular2';
+import { DisplayComponent } from 'display-component';
 
 @Component({
-  selector: 'my-app'
+  selector: 'main-app'
 })
 @View({
-  template: '<h1>Hello {{ name }}</h1>'
+  template:`
+    <h1>Main App</h1>
+    <display></display>
+  `,
+  directives: [DisplayComponent]
 })
-// Component controller
-class MyAppComponent {
-  name: string;
-  
-  constructor() {
-    this.name = 'Alice';
-  }
-  
-  hello() {
-    alert(1);
-  }
+class MainComponent {
+    constructor() {
+      
+    }
 }
 
-bootstrap(MyAppComponent);
-
+bootstrap(MainComponent);
