@@ -2,29 +2,14 @@
 
 import {Component, View, NgFor, NgIf, Inject} from 'angular2/angular2';
 
-class FriendsService {
-	names: Array<string>;
-	
-	constructor() {
-		this.names = ['Igor', 'Dmitry', 'NikH', 'Sheva'];
-	}
-}
+import {FriendsService} from 'services/friends-service';
 
 @Component({
 	selector: "display",
 	appInjector: [FriendsService]
 })
 @View({
-	template: `
-		<p>My Name: {{ myName }}</p>
-		<p *ng-if="names.length > 3">You have many friends!</p>
-		<p>List of names:</p>
-		<ul>
-			<li *ng-for="#name of names">
-				{{ name }}
-			</li>
-		</ul>
-	`,
+	templateUrl: 'views/friendList.html',
 	directives: [NgFor, NgIf]	
 })
 export class DisplayComponent {
