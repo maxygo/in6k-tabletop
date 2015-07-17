@@ -2,4 +2,4 @@
 bower_components
 node_modules
 public
-src/webapp/pages/*.js
+src/webapp/app/*.js
