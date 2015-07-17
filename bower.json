@@ -1,0 +1,23 @@
+{
+  "name": "kraken",
+  "version": "1.0.0",
+  "homepage": "https://github.com/maxygo/kraken",
+  "authors": [
+    "Maxim Golovenskiy <maximg@interlink-ua.com>"
+  ],
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap": "~3.3.5",
+    "traceur-runtime": "~0.0.90"
+  }
+}
