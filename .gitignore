@@ -1,5 +1,14 @@
+# IDE files #
 .idea
-bower_components
+*.iml
+
+# OS generated files #
+.DS_Store
+Thumbs.db
+
+# Node Files #
 node_modules
+bower_components
+
+# Dist #
 public
-src/webapp/app/*.js
